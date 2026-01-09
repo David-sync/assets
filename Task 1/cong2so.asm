@@ -48,7 +48,6 @@ main PROC
     xor ebx, ebx
     
 myLoop:
-    ; không được cộng 2 địa chỉ trong [ ], phải đưa 1 trong 2 vào thanh ghi
     cmp bytes_read1, 0
     jg continue
     cmp bytes_read2, 0 
@@ -99,7 +98,7 @@ twoIsZero:
 Done:
     add al, '0'
     mov [ecx], al
-    dec ecx ; de ecx tro toi phan tu cuoi cung
+    dec ecx 
     jmp myLoop
 
 
@@ -128,4 +127,5 @@ actuallyDone:
 
 
 main ENDP
+
 END main
